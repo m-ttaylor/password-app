@@ -1,0 +1,83 @@
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 33%; /* Full-width */
+    height: 14px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 18px; /* Set a specific slider handle width */
+    height: 18px; /* Slider handle height */
+    background: #008CBA; /* blue background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 18px; /* Set a specific slider handle width */
+    height: 85px; /* Slider handle height */
+    background: #008CBA; /* blue background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.button {
+    background-color: #008CBA; /* blue */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.button:hover {
+    background-color: #C4CFD7; /* light blue */
+    color: black;
+}
+
+.password {
+    font-family: "courier new";
+    font-size: 22px;
+}
+
+body {
+    font-size: 20px;
+    font-family: "helvetica";
+    text-align: center;
+}
+
+h1 {
+    color: #363637;
+    font-size: 50px;
+}
+h2 {
+    color: #707375;
+    font-style: normal;
+    font-size: 34px;
+}
+footer {
+    bottom: 10%;
+    position: absolute;
+    width: 100%;
+    font-size: 16px;
+}
+p {
+    color: grey;
+}

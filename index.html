@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="wordlist.js"></script>
+<script src="pwd.js"></script>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="pwd.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div ng-app="">
+        <h1>Generate a Passphrase</h1>
+        <p>passphrase length: {{slider}} words</p>
+        <p id='entropy'>entropy is: 119.59 bits</p>
+        <div class="slidercontainer">
+            <input type="range" ng-model="slider" onmouseup="calculate_strength()" min="2" max="16" value="9" class="slider" id="myRange">
+        </div>
+
+        <br>
+        <div>
+            <button class="button" onclick="generate_password()">Generate</button>
+        </div>
+        <br>
+        <p id='password_result' class="password"></p>
+    </div>
+</body>
+<footer>
+    <p>View source on <a href="https://github.com/m-ttaylor">github</a>.</p>
+    <p></p>
+    <p>
+        <a href="https://xkcd.com/936/" title="is it even an xkcd link without alt-text?">inspiration</a>
+    </p>
+    <p>
+        <a href="https://github.com/first20hours/google-10000-english"
+        title="using the first 2058 words, with first 10 thrown out for being all 3 letter or less words e.g. 'a', 'the'">words source</a>
+    </p>
+</footer>
+</html>
