@@ -2,7 +2,7 @@
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src="wordlist.js"></script>
-<script src="pwd.js"></script>
+
 
 <head>
     <link rel="stylesheet" type="text/css" href="pwd.css">
@@ -18,12 +18,23 @@
         </div>
 
         <br>
+
+        <button class="accordion">more options</button>
+        <div class="options">
+            <input type="checkbox" id="option1" onclick="pass_options()" checked>include spaces
+            <!-- <input type="checkbox" name="option2">option2
+            <input type="checkbox" name="option3">option3 -->
+            <br>
+        </div>
+
+        <br>
         <div>
             <button class="button" onclick="generate_password()">Generate</button>
         </div>
         <br>
         <p id='password_result' class="password"></p>
     </div>
+    <script src="pwd.js"></script>
 </body>
 <footer>
     <p>View source on <a href="https://github.com/m-ttaylor">github</a>.</p>

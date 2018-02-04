@@ -41,7 +41,7 @@
     background-color: #008CBA; /* blue */
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 27px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -55,6 +55,29 @@
 .password {
     font-family: "courier new";
     font-size: 22px;
+}
+
+.accordion {
+    background-color: #eee;
+    /* cursor: pointer; */
+    text-align: left;
+    transition: 0.2s;
+    margin-bottom: 10px;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.options {
+    margin: auto;
+    width: 33%;
+    background-color: #F9F9F9;
+    display: none;
+    overflow: hidden;
+    font-size: 14px;
+    text-align: left;
+    padding: 10px;
 }
 
 body {

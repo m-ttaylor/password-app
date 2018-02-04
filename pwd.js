@@ -1,3 +1,5 @@
+spaces = true;
+
 function rand_int(min, max) {
     /* simpler, but apparently javascript's default rng is terrible */
     // return Math.floor(Math.random() * (max - min)) + min;
@@ -18,7 +20,8 @@ function generate_password() {
         var rand_index = rand_int(0, 10000);
         words.push(wordlist[rand_index]);
     }
-    var pwd = words.join(" ");
+    if (spaces) var pwd = words.join(" ");
+    else var pwd = words.join("");
     document.getElementById('password_result').innerText = pwd;
 }
 
@@ -38,3 +41,29 @@ function show_options() {
         el.style.display = "none";
     }
 }
+
+function pass_options() {
+    spaces = document.getElementById("option1").checked;
+}
+
+//handle accordion menu
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+// var el = document.getElementById("advancedOptions");
+// el.style.display = "none";
