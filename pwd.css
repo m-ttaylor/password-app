@@ -6,7 +6,7 @@
 .slider {
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
-    width: 33%; /* Full-width */
+    width: 400px; /* Full-width */
     height: 14px; /* Specified height */
     background: #d3d3d3; /* Grey background */
     outline: none; /* Remove outline */
@@ -45,7 +45,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 120%;
 }
 .button:hover {
     background-color: #C4CFD7; /* light blue */
@@ -55,10 +55,17 @@
 .password {
     font-family: "courier new";
     font-size: 22px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    overflow: hidden;
 }
 
 .accordion {
     background-color: #eee;
+    font-size: 100%;
     /* cursor: pointer; */
     text-align: left;
     transition: 0.2s;
@@ -73,11 +80,11 @@
 
 .options {
     margin: auto;
-    width: 33%;
+    width: 400px;
     background-color: #F9F9F9;
     display: none;
     overflow: hidden;
-    font-size: 14px;
+    font-size: 80%;
     text-align: left;
     padding: 10px;
     border-style: dashed;
@@ -86,25 +93,34 @@
 }
 
 body {
-    font-size: 20px;
+    font-size: 16px;
     font-family: "helvetica";
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
+p {
+    font-size: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 h1 {
     color: #363637;
-    font-size: 50px;
+    font-size: 300%;
 }
 h2 {
     color: #707375;
     font-style: normal;
-    font-size: 34px;
+    font-size: 200%;
 }
 footer {
-    bottom: 10%;
-    position: absolute;
-    width: 100%;
-    font-size: 16px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 100%;
 }
 p {
     color: grey;
