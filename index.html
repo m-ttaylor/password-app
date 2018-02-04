@@ -12,27 +12,25 @@
     <div ng-app="">
         <h1>Generate a Passphrase</h1>
         <p>passphrase length: {{slider}} words</p>
-        <p id='entropy'>entropy is: 119.59 bits</p>
         <div class="slidercontainer">
-            <input type="range" ng-model="slider" onmouseup="calculate_strength()" min="2" max="16" value="9" class="slider" id="myRange">
-        </div>
+            <input type="range" ng-model="slider" min="2" max="16" value="9" class="slider" id="myRange">
 
-        <br>
-
-        <button class="accordion">more options</button>
-        <div class="options">
-            <input type="checkbox" id="option1" onclick="pass_options()" checked>include spaces
-            <!-- <input type="checkbox" name="option2">option2
-            <input type="checkbox" name="option3">option3 -->
-            <br>
+            <input type="button" class="accordion" onclick="return expand(this)" value="more options +"></button>
+            <div class="options">
+                <input type="checkbox" id="option1" onclick="pass_options()" checked>include spaces
+                <!-- <input type="checkbox" name="option2">option2
+                <input type="checkbox" name="option3">option3 -->
+                <br>
+            </div>
         </div>
 
         <br>
         <div>
-            <button class="button" onclick="generate_password()">Generate</button>
+            <button class="button" onclick="generate_password(), calculate_strength()">Generate</button>
         </div>
         <br>
         <p id='password_result' class="password"></p>
+        <p id='entropy'></p>
     </div>
     <script src="pwd.js"></script>
 </body>

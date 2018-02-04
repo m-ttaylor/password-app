@@ -46,6 +46,14 @@ function pass_options() {
     spaces = document.getElementById("option1").checked;
 }
 
+function expand(el) {
+    if (el.value === "more options +") {
+        el.value = "more options -";
+    } else {
+        el.value = "more options +";
+    }
+}
+
 //handle accordion menu
 var acc = document.getElementsByClassName("accordion");
 var i;
