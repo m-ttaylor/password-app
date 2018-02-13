@@ -9,33 +9,37 @@
     <link rel="stylesheet" type="text/css" href="pwd.css">
     <title>Password Generator</title>
 </head>
+
 <body>
     <div ng-app="">
         <h1>Generate a Passphrase</h1>
-        <p>passphrase length: {{slider}} words</p>
-        <div class="slidercontainer">
-            <input type="range" ng-model="slider" min="2" max="16" value="9" class="slider" id="myRange">
 
-            <br>
-            <input type="button" class="accordion" onclick="return expand(this)" value="more options +"></button>
+        <div class="options">
+            <p>passphrase length: {{slider}} words</p>
 
-            <div class="options">
-                <input type="checkbox" id="option1" onclick="pass_options()" checked>include spaces
-                <!-- <input type="checkbox" name="option2">option2
-                <input type="checkbox" name="option3">option3 -->
-                <br>
+            <div class="slidercontainer">
+                <input type="range" ng-model="slider" min="2" max="16" value="9" class="slider" id="myRange">
+                <!-- <input type="button" class="accordion" onclick="return expand(this)" value="more options +"> -->
+            </div>
+
+            <p><input type="checkbox" id="option1" onclick="pass_options()" checked>include spaces<p>
+
+            <div>
+                <button class="button" onclick="generate_password(), calculate_strength()">Generate</button>
             </div>
         </div>
 
         <br>
+
         <div>
-            <button class="button" onclick="generate_password(), calculate_strength()">Generate</button>
-        </div>
-        <br>
-        <p id='password_result' class="password"></p>
-        <p id='entropy'></p>
+            <p id='password_result' class="password"></p><br>
+            <button id="copy_button" class="copy_button" onclick="copyToClipboard()">copy to clipboard</button>
+            <p id='entropy'></p>
+        <div>
     </div>
+
     <script src="pwd.js"></script>
+    
 </body>
 
 <footer>

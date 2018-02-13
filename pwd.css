@@ -41,6 +41,19 @@
     cursor: pointer; /* Cursor on hover */
 }
 
+.copy_button {
+    border-style: dashed;
+    border-width: 2px;
+    border-radius: 8px;
+    background-color: inherit;
+    padding: 6px;
+    display: none;
+}
+.copy_button:hover{
+    background-color: #C4CFD7;
+    color: white;
+}
+
 .button {
     background-color: #008CBA; /* blue */
     border: none;
@@ -51,6 +64,7 @@
     padding: 2%;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin: 2%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -90,19 +104,28 @@
 
 .options {
     margin: auto;
-    border-radius: 2px;
-    width: 50%;
-    max-width: 300px;
-    background-color: #F9F9F9;
-    display: none;
+    width: 90%;
+    max-width: 500px;
+    /* display: none; */
     overflow: hidden;
     font-size: 80%;
-    text-align: left;
-    padding: 4px;
+    text-align: center;
+    padding: 1%;
     border-style: dashed;
     border-width: 2px;
     border-color: #707375;
+    border-radius: 10px;
 }
+
+.options-label {
+    position: relative;
+    margin: auto;
+    width: 20%;
+    text-align: left;
+    font-size: 120%;
+}
+
+
 
 body {
     font-size: 16px;
@@ -116,18 +139,18 @@ body {
 
 p {
     font-size: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
 }
 h1 {
     color: #363637;
     font-size: 200%;
 }
 h2 {
+    text-align: left;
     color: #707375;
     font-style: normal;
     font-size: 150%;
+    padding: 0px;
+    margin: 0px;
 }
 footer {
     padding-top: 10%;
