@@ -14,14 +14,17 @@ function rand_int(min, max) {
 function generate_password() {
     var length = document.getElementById('myRange').value;
     console.log("selected length is "+length);
+    console.log(wordlist.length);
     var words = [];
     for (var l = 0; l < length; l++) {
 
         var rand_index = rand_int(0, 10000);
         words.push(wordlist[rand_index]);
     }
+
     if (spaces) var pwd = words.join(" ");
     else var pwd = words.join("");
+
     document.getElementById('password_result').innerText = pwd;
 }
 
@@ -44,6 +47,7 @@ function show_options() {
 
 function pass_options() {
     spaces = document.getElementById("option1").checked;
+    // put additional option effects here
 }
 
 function expand(el) {
